@@ -1,12 +1,7 @@
-import React from 'react'
-import "./SecondNavbar.css";
+import React from "react";
 
 const SecondNavbar = () => {
-  return (
-    <div className="childNavbar">
-      
-    </div>
-  )
-}
+  return <div>SecondNavbar</div>;
+};
 
-export default SecondNavbar
+export default SecondNavbar;

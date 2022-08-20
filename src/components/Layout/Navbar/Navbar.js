@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import SecondNavbar from "./SecondNavbar";
 
 const Navbar = () => {
   const menuToggle = () => {
