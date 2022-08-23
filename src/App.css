@@ -1,3 +1,6 @@
+body {
+  background: #422d12;
+}
 .App {
   text-align: center;
 }
@@ -5,8 +8,4 @@
 body.active {
   height: 100vh;
   overflow: hidden;
-}
-
-.ekin {
-  height: 700px;
 }
