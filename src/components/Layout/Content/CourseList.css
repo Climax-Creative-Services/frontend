@@ -24,6 +24,7 @@
   height: 513px;
   margin: 2rem 0 0;
   padding: 2rem;
+  transition: height 0.3s ease-in-out;
 }
 
 .card:hover {
@@ -117,9 +118,9 @@
 
 .card .button-container {
   width: 100%;
-  height: 0px;
+  height: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  transition: height 0.3s ease-out;
 }
 
 .card:hover .button-container {
@@ -132,7 +133,7 @@
   font-weight: 700;
   height: 0px;
   background-color: white;
-  transition: height 0.2s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 .card:hover .button-container .enroll-now {
@@ -150,11 +151,11 @@
   color: white;
   height: 0px;
   background: rgb(82, 81, 81);
-  transition: height 0.2s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 .card:hover .button-container .buy-for {
   height: 62px;
-  transition: height 0.2s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
 .card .button-container .buy-for:hover {
@@ -164,11 +165,12 @@
   position: relative;
   top: 0;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
 .card:hover .button-container a {
+  position: relative;
   top: 15px;
   opacity: 1;
-  transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
 }
