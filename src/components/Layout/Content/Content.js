@@ -1,5 +1,6 @@
 import React from "react";
 import "./Content.css";
+import CourseList from "./CourseList";
 
 const Content = () => {
   const contentToggle = () => {
@@ -56,6 +57,7 @@ const Content = () => {
       <div className="image-container">
         <div className="glass"></div>
       </div>
+      <CourseList />
     </div>
   );
 };

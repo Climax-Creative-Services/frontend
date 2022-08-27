@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -65,7 +66,8 @@ const Navbar = () => {
                   <img src="icons/help-icon.png" /> <a href="#">Help</a>
                 </li>
                 <li>
-                  <img src="icons/logout-icon.png" /> <a href="#">Logout</a>
+                  <img src="icons/logout-icon.png" />
+                  <NavLink to="/login">Logout</NavLink>
                 </li>
               </ul>
             </div>
