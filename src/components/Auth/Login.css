@@ -106,8 +106,10 @@ p {
 }
 
 p span {
-  color: rgb(10, 248, 10);
+  color: #d83563;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #000;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
