@@ -93,7 +93,7 @@
 }
 #register-confirmPassword-input {
   display: flex;
-  margin-bottom: 1rem;
+
   margin-right: 0;
   margin-left: 1rem;
   width: 100%;
@@ -118,6 +118,7 @@
   width: 15%;
   height: 4.3rem;
   border-radius: 3px;
+
   border: 1px solid rgba(255, 255, 255, 0.125);
   background: url(/public/icons/show.png);
   background-color: rgba(11, 15, 22, 0.322);
@@ -136,6 +137,7 @@
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   background: url(/public/icons/hidden.png);
+
   background-color: rgba(11, 15, 22, 0.322);
   background-repeat: no-repeat;
   background-position: center;
@@ -167,6 +169,7 @@
 }
 #register-password-input {
   display: flex;
+  margin-bottom: 0;
 }
 .register-button {
   width: 20%;
@@ -186,4 +189,13 @@
 .register-button:hover {
   background-color: #d83563;
   transition: background-color 0.1s ease-in-out;
+}
+
+/* Validation Error Message  */
+
+.error {
+  color: #ff0000;
+  font-size: 1.125rem;
+
+  font-weight: 400;
 }
