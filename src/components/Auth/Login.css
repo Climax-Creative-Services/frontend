@@ -98,14 +98,14 @@
   transition: background-color 0.1s ease-in-out;
 }
 
-p {
+.not-registered {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
-p span {
+.not-registered span {
   color: #d83563;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: #000;

@@ -62,7 +62,7 @@ const Login = () => {
               </div>
               <button type="submit">Login</button>
             </form>
-            <p>
+            <p className="not-registered">
               Not registered?{" "}
               <Link to={"/join"} style={{ textDecoration: "none" }}>
                 <span>Create an account </span>

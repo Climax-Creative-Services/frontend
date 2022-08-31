@@ -1,126 +1,109 @@
 .courseList {
-  padding-top: 20px;
+  cursor: grab;
+  overflow: hidden;
+}
+.card-container {
+  margin-top: 20px;
   padding-bottom: 9rem;
   padding-left: 10rem;
 
   height: 638px;
-}
-.card-container {
-  margin-top: 20px;
-}
-
-.slider-container {
-  cursor: grab;
-  overflow: hidden;
-}
-
-.inner-slider {
   display: flex;
+  gap: 30px;
+  white-space: nowrap;
 }
+
 .card {
+  border-radius: 8px;
   pointer-events: auto;
+
   cursor: pointer;
-  min-width: 350px;
+  overflow: hidden;
+  width: 350px;
   height: 513px;
   margin: 2rem 0 0;
-  padding: 2rem;
+  padding: 0;
   transition: height 0.3s ease-in-out;
 }
 
 .card:hover {
   height: 637px;
+
   transition: height 0.3s ease-in-out;
 }
 
-.card-glass {
-  /* From https://css.glass */
-  backdrop-filter: blur(8px) saturate(180%);
-  -webkit-backdrop-filter: blur(8px) saturate(180%);
-  background-color: rgba(48, 48, 48, 0.596);
-  width: 100%;
-  height: 100%;
-  transition: background-color 0.5s ease-in-out,
-    backdrop-filter 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
-
-  z-index: 1;
-}
-
-.card-glass:hover {
-  /* From https://css.glass */
-  backdrop-filter: blur(0px) saturate(100%);
-  -webkit-backdrop-filter: blur(0px) saturate(100%);
-  background-color: rgba(17, 25, 40, 0);
-
-  transition: background-color 0.5s ease-in-out,
-    backdrop-filter 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
-}
-
-.card .card-image {
-  background: url("https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-    no-repeat center center;
-  width: 350px;
+.card-image {
   height: 513px;
-  background-size: cover;
-  background-position: center;
+
+  filter: blur(0px) brightness(1);
+  transition: filter 0.3s ease-in-out;
+  background-size: auto;
+  background-position: right;
   background-repeat: no-repeat;
-
-  z-index: 1;
+  background-clip: content-box;
+}
+.card:hover .card-image {
+  filter: blur(8px) brightness(0.7);
+  transition: filter 0.3s ease-in-out;
 }
 
-.card .card-glass-inner {
-  height: 513px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-start;
-  text-align: left;
-  padding-left: 1rem;
+/* Card Text */
+.card-text {
+  position: absolute;
+
+  padding-left: 20px;
+  margin: 0;
+  bottom: 11rem;
+  transition: bottom 0.3s ease-in-out;
+}
+.card:hover .card-text {
+  bottom: 15rem;
+  transition: bottom 0.3s ease-in-out;
 }
 
-.card .card-glass-inner .course-teacher-name {
-  -webkit-text-stroke: 0.2px black;
-  font-size: 22px;
+.card-text .course-teacher-name {
+  font-size: 1.2rem;
+  font-weight: bold;
   text-align: left;
-  font: normal normal bold 22px/30px Segoe UI;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.card .card-glass-inner .course-name {
-  -webkit-text-stroke: 0.3px black;
-  font: normal normal bold 37px/49px Segoe UI;
-  font-size: 37px;
-  text-align: left;
-  text-transform: Uowercase;
 
   color: #fff;
-  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.card-text .course-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
   margin-top: 0;
 }
+.card-text .course-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-left: 2.5rem;
+  color: #fff;
 
-.card .card-glass-inner .course-description {
-  align-self: center;
-  margin-top: 0px;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 300;
+  margin-bottom: 1rem;
   opacity: 0;
-  height: 0px;
-  transition: height 0.3s ease-out, opacity 0.3s ease-out;
+  transition: opacity 0.2s ease-in-out;
 }
-.card:hover .card-glass-inner .course-description {
-  height: 2rem;
+.card:hover .card-text .course-description {
   opacity: 1;
-  transition: height 0.3s ease-out, opacity 0.3s ease-out;
+  transition: opacity 0.5s ease-in-out;
 }
+
 /* Card Buttons */
 
 .card .button-container {
-  width: 100%;
-  height: 0;
+  width: 350px;
+
   background: rgba(0, 0, 0, 0.5);
   transition: height 0.3s ease-out;
+  z-index: 2;
 }
 
 .card:hover .button-container {

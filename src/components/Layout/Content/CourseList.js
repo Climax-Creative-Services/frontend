@@ -1,18 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
+
 import "./CourseList.css";
 
 const CourseList = () => {
-  const [width, setWidth] = useState(0);
-  const careousel = useRef();
-
-  useEffect(() => {
-    console.log(careousel.current.scrollWidth, careousel.current.offsetWidth);
-    setWidth(careousel.current.scrollWidth - careousel.current.offsetWidth);
-
-    return () => {};
-  }, []);
-
   const cardHover = (e) => {
     const toggleMenu = document.querySelector(".card");
     toggleMenu.classList.toggle("active");
@@ -20,24 +10,24 @@ const CourseList = () => {
   return (
     <div className="courseList">
       <div className="card-container">
-        <motion.div
-          ref={careousel}
-          className="slider-container"
-          whileTap={{ cursor: "grabbing" }}
+        <div
+          className="card"
+          onMouseEnter={cardHover}
+          onMouseLeave={cardHover}
+          key={1}
         >
-          <motion.div
-            className="inner-slider"
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-          >
-            <div
-              key={1}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
+          <img
+            className="card-image"
+            src="https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          />
+          <div className="card-text">
+            <h3 className="course-teacher-name">Gerçek Dorman</h3>
+            <h4 className="course-name">
+              MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
+            </h4>
+            <p className="course-description">5 Course | 50 lesson</p>
+          </div>
+          {/* <div className="card-glass">
                   <div className="card-glass-inner">
                     <h3 className="course-teacher-name">Gerçek Dorman</h3>
                     <h4 className="course-name">
@@ -45,26 +35,35 @@ const CourseList = () => {
                     </h4>
                     <p className="course-description">5 Course | 50 lesson</p>
                   </div>
-                </div>
-              </div>
+                </div> */}
 
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+          <div className="button-container">
+            <div className="enroll-now">
+              <a className="enroll-button">Enroll Now</a>
             </div>
-            <div
-              key={2}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
+            <div className="buy-for">
+              <a className="buy-button">Buy for $9.99</a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card"
+          onMouseEnter={cardHover}
+          onMouseLeave={cardHover}
+          key={2}
+        >
+          <img
+            className="card-image"
+            src="https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          />
+          <div className="card-text">
+            <h3 className="course-teacher-name">Gerçek Dorman</h3>
+            <h4 className="course-name">
+              MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
+            </h4>
+            <p className="course-description">5 Course | 50 lesson</p>
+          </div>
+          {/* <div className="card-glass">
                   <div className="card-glass-inner">
                     <h3 className="course-teacher-name">Gerçek Dorman</h3>
                     <h4 className="course-name">
@@ -72,25 +71,35 @@ const CourseList = () => {
                     </h4>
                     <p className="course-description">5 Course | 50 lesson</p>
                   </div>
-                </div>
-              </div>
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+                </div> */}
+
+          <div className="button-container">
+            <div className="enroll-now">
+              <a className="enroll-button">Enroll Now</a>
             </div>
-            <div
-              key={3}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
+            <div className="buy-for">
+              <a className="buy-button">Buy for $9.99</a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card"
+          onMouseEnter={cardHover}
+          onMouseLeave={cardHover}
+          key={3}
+        >
+          <img
+            className="card-image"
+            src="https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          />
+          <div className="card-text">
+            <h3 className="course-teacher-name">Gerçek Dorman</h3>
+            <h4 className="course-name">
+              MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
+            </h4>
+            <p className="course-description">5 Course | 50 lesson</p>
+          </div>
+          {/* <div className="card-glass">
                   <div className="card-glass-inner">
                     <h3 className="course-teacher-name">Gerçek Dorman</h3>
                     <h4 className="course-name">
@@ -98,25 +107,35 @@ const CourseList = () => {
                     </h4>
                     <p className="course-description">5 Course | 50 lesson</p>
                   </div>
-                </div>
-              </div>
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+                </div> */}
+
+          <div className="button-container">
+            <div className="enroll-now">
+              <a className="enroll-button">Enroll Now</a>
             </div>
-            <div
-              key={4}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
+            <div className="buy-for">
+              <a className="buy-button">Buy for $9.99</a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card"
+          onMouseEnter={cardHover}
+          onMouseLeave={cardHover}
+          key={4}
+        >
+          <img
+            className="card-image"
+            src="https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          />
+          <div className="card-text">
+            <h3 className="course-teacher-name">Gerçek Dorman</h3>
+            <h4 className="course-name">
+              MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
+            </h4>
+            <p className="course-description">5 Course | 50 lesson</p>
+          </div>
+          {/* <div className="card-glass">
                   <div className="card-glass-inner">
                     <h3 className="course-teacher-name">Gerçek Dorman</h3>
                     <h4 className="course-name">
@@ -124,25 +143,35 @@ const CourseList = () => {
                     </h4>
                     <p className="course-description">5 Course | 50 lesson</p>
                   </div>
-                </div>
-              </div>
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+                </div> */}
+
+          <div className="button-container">
+            <div className="enroll-now">
+              <a className="enroll-button">Enroll Now</a>
             </div>
-            <div
-              key={5}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
+            <div className="buy-for">
+              <a className="buy-button">Buy for $9.99</a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card"
+          onMouseEnter={cardHover}
+          onMouseLeave={cardHover}
+          key={5}
+        >
+          <img
+            className="card-image"
+            src="https://images.unsplash.com/photo-1614248036189-09375ea8098f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          />
+          <div className="card-text">
+            <h3 className="course-teacher-name">Gerçek Dorman</h3>
+            <h4 className="course-name">
+              MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
+            </h4>
+            <p className="course-description">5 Course | 50 lesson</p>
+          </div>
+          {/* <div className="card-glass">
                   <div className="card-glass-inner">
                     <h3 className="course-teacher-name">Gerçek Dorman</h3>
                     <h4 className="course-name">
@@ -150,45 +179,17 @@ const CourseList = () => {
                     </h4>
                     <p className="course-description">5 Course | 50 lesson</p>
                   </div>
-                </div>
-              </div>
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+                </div> */}
+
+          <div className="button-container">
+            <div className="enroll-now">
+              <a className="enroll-button">Enroll Now</a>
             </div>
-            <div
-              key={6}
-              className="card"
-              onMouseEnter={cardHover}
-              onMouseLeave={cardHover}
-            >
-              <div className="card-image">
-                <div className="card-glass">
-                  <div className="card-glass-inner">
-                    <h3 className="course-teacher-name">Gerçek Dorman</h3>
-                    <h4 className="course-name">
-                      MASTER <br /> SYNTHIZER &<br /> SOUND DESIGN
-                    </h4>
-                    <p className="course-description">5 Course | 50 lesson</p>
-                  </div>
-                </div>
-              </div>
-              <div className="button-container">
-                <div className="enroll-now">
-                  <a className="enroll-button">Enroll Now</a>
-                </div>
-                <div className="buy-for">
-                  <a className="buy-button">Buy for $9.99</a>
-                </div>
-              </div>
+            <div className="buy-for">
+              <a className="buy-button">Buy for $9.99</a>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );
