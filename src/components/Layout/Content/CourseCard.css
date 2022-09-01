@@ -1,0 +1,144 @@
+.card {
+  border-radius: 8px;
+  pointer-events: auto;
+
+  cursor: pointer;
+  overflow: hidden;
+  width: 350px;
+  height: 513px;
+  margin: 2rem 0 0;
+  padding: 0;
+  transition: height 0.3s ease-in-out;
+}
+
+.card:hover {
+  height: 637px;
+
+  transition: height 0.3s ease-in-out;
+}
+
+.card-image {
+  height: 513px;
+
+  filter: blur(0px) brightness(1);
+  transition: filter 0.3s ease-in-out;
+  background-size: auto;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+.card:hover .card-image {
+  filter: blur(8px) brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Card Text */
+.card-text {
+  position: absolute;
+
+  padding-left: 20px;
+  margin: 0;
+  bottom: 11rem;
+  transition: bottom 0.3s ease-in-out;
+}
+.card:hover .card-text {
+  bottom: 15rem;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.card-text .course-teacher-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.card-text .course-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+.card-text .course-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-left: 2.5rem;
+  color: #fff;
+
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.card:hover .card-text .course-description {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Card Buttons */
+
+.card .button-container {
+  width: 350px;
+
+  background: rgba(0, 0, 0, 0.5);
+  transition: height 0.3s ease-out;
+  z-index: 2;
+}
+
+.card:hover .button-container {
+  height: 124px;
+  transition: height 0.3s ease-in-out;
+}
+
+.card .button-container .enroll-now {
+  font-size: x-large;
+  font-weight: 700;
+  height: 0px;
+  background-color: white;
+  transition: height 0.3s ease-in-out;
+}
+
+.card:hover .button-container .enroll-now {
+  height: 62px;
+  transition: height 0.3s ease-in-out;
+}
+
+.card .button-container .enroll-now:hover {
+  background-color: #808080;
+  color: white;
+}
+.card .button-container .buy-for {
+  font-size: x-large;
+  font-weight: 700;
+  color: white;
+  height: 0px;
+  background: rgb(82, 81, 81);
+  transition: height 0.3s ease-in-out;
+}
+.card:hover .button-container .buy-for {
+  height: 62px;
+  transition: height 0.3s ease-in-out;
+}
+
+.card .button-container .buy-for:hover {
+  background: #2a2a2a;
+}
+.button-container a {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.card:hover .button-container a {
+  position: relative;
+  top: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+}
