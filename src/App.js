@@ -17,7 +17,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/join" element={<Register />} />
       </Routes>
-      <div className="ekin"></div>
     </div>
   );
 }

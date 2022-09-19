@@ -1,12 +1,12 @@
 import React from "react";
 import CourseCard from "./CourseCard";
 
-import "./CourseList.css";
+import classes from "./CourseList.module.css";
 
 const CourseList = () => {
   return (
-    <div className="courseList">
-      <div className="card-container">
+    <div className={classes.courseList}>
+      <div className={classes["card-container"]}>
         <CourseCard />
         <CourseCard />
         <CourseCard />

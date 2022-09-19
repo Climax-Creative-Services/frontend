@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./Login.css";
+import classes from "./Login.module.css";
 
 const initialValues = {
   email: "",
@@ -27,14 +27,17 @@ const Login = () => {
   });
   console.log("formik.touched", formik.touched);
   return (
-    <div className="login-background">
-      <div className="login-background-blur">
-        <div className="login"></div>
-        <div className="login-card">
+    <div className={classes["login-background"]}>
+      <div className={classes["login-background-blur"]}>
+        <div className={classes.login}></div>
+        <div className={classes["login-card"]}>
           <h1>Login</h1>
-          <div className="login-card-body">
-            <form className="login-form" onSubmit={formik.handleSubmit}>
-              <div className="login-form-control">
+          <div className={classes["login-card-body"]}>
+            <form
+              className={classes["login-form"]}
+              onSubmit={formik.handleSubmit}
+            >
+              <div className={classes["login-form-control"]}>
                 <input
                   type="text"
                   id="email"
@@ -44,10 +47,10 @@ const Login = () => {
                   value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                  <div className="error">{formik.errors.email}</div>
+                  <div className={classes.error}>{formik.errors.email}</div>
                 ) : null}
               </div>
-              <div className="login-form-control">
+              <div className={classes["login-form-control"]}>
                 <input
                   type="password"
                   id="password"
@@ -57,12 +60,12 @@ const Login = () => {
                   value={formik.values.password}
                 />
                 {formik.touched.password && formik.errors.password ? (
-                  <div className="error">{formik.errors.password}</div>
+                  <div className={classes.error}>{formik.errors.password}</div>
                 ) : null}
               </div>
               <button type="submit">Login</button>
             </form>
-            <p className="not-registered">
+            <p className={classes["not-registered"]}>
               Not registered?{" "}
               <Link to={"/join"} style={{ textDecoration: "none" }}>
                 <span>Create an account </span>
